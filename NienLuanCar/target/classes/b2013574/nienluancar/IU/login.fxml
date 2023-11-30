@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="350.0" styleClass="bg-form" stylesheets="@../design/loginform.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="b2013574.nienluancar.loginController">
+    <children>
+        <AnchorPane fx:id="login_form" prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <Label layoutX="43.0" layoutY="123.0" styleClass="header" stylesheets="@../design/loginform.css" text="ĐĂNG NHẬP TÀI KHOẢN:" textFill="WHITE" />
+                <TextField fx:id="Login_username" layoutX="50.0" layoutY="199.0" onAction="#loginAccount" prefHeight="30.0" prefWidth="250.0" promptText="Tài khoản" styleClass="textfield" stylesheets="@../design/loginform.css" />
+                <PasswordField fx:id="Login_password" layoutX="50.0" layoutY="251.0" onAction="#loginAccount" prefHeight="30.0" prefWidth="250.0" promptText="Mật khẩu" styleClass="textfield" stylesheets="@../design/loginform.css" />
+                <Button fx:id="Login_btn" layoutX="49.0" layoutY="303.0" mnemonicParsing="false" onAction="#loginAccount" prefHeight="40.0" prefWidth="109.0" styleClass="btn" stylesheets="@../design/loginform.css" text="Đăng nhập" />
+                <Label layoutX="73.0" layoutY="466.0" text="Chưa có tài khoản?" textFill="WHITE" />
+                <FontAwesomeIconView fill="#ff3c3c" glyphName="USER" layoutX="56.0" layoutY="221.0" size="20" />
+                <FontAwesomeIconView fill="#ff3c3c" glyphName="LOCK" layoutX="57.0" layoutY="273.0" size="20.0" />
+                <ComboBox fx:id="Login_cn" layoutX="175.0" layoutY="462.0" onAction="#switchForm" prefHeight="25.0" prefWidth="141.0" promptText="Chọn chức năng" />
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="admin_form" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" visible="false">
+            <children>
+                <Label layoutX="49.0" layoutY="105.0" styleClass="header" stylesheets="@../design/loginform.css" text="ĐĂNG KÝ TÀI KHOẢN:" textFill="WHITE" />
+                <Label layoutX="53.0" layoutY="135.0" text="Admin" textFill="WHITE" />
+                <TextField fx:id="admin_username" layoutX="50.0" layoutY="176.0" onAction="#registerAdmin" prefHeight="30.0" prefWidth="250.0" promptText="Tài khoản" styleClass="textfield" stylesheets="@../design/loginform.css" />
+                <PasswordField fx:id="admin_cpassword" layoutX="49.0" layoutY="276.0" onAction="#registerAdmin" prefHeight="30.0" prefWidth="250.0" promptText="Nhập lại mật khẩu" styleClass="textfield" stylesheets="@../design/loginform.css" />
+                <PasswordField fx:id="admin_password" layoutX="50.0" layoutY="228.0" onAction="#registerAdmin" prefHeight="30.0" prefWidth="250.0" promptText="Mật khẩu" styleClass="textfield" stylesheets="@../design/loginform.css" />
+                <Button fx:id="admin_btnregister" layoutX="50.0" layoutY="331.0" mnemonicParsing="false" onAction="#registerAdmin" prefHeight="40.0" prefWidth="109.0" styleClass="btn" stylesheets="@../design/loginform.css" text="Đăng ký" />
+                <FontAwesomeIconView fill="#ff3c3c" glyphName="USER" layoutX="56.0" layoutY="198.0" size="20" />
+                <FontAwesomeIconView fill="#ff3c3c" glyphName="LOCK" layoutX="57.0" layoutY="250.0" size="20.0" />
+                <FontAwesomeIconView fill="#ff3c3c" glyphName="LOCK" layoutX="57.0" layoutY="298.0" size="20.0" />
+                <Label layoutX="97.0" layoutY="466.0" text="Đã có tài khoản?" textFill="WHITE" />
+                <Hyperlink fx:id="admin_dn" layoutX="186.0" layoutY="463.0" onAction="#loginform" text="Đăng nhập" />
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="seller_form" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" visible="false">
+            <children>
+                <Label layoutX="49.0" layoutY="82.0" styleClass="header" stylesheets="@../design/loginform.css" text="ĐĂNG KÝ TÀI KHOẢN:" textFill="WHITE" />
+                <Label layoutX="53.0" layoutY="112.0" text="Người bán" textFill="WHITE" />
+                <TextField fx:id="seller_email" layoutX="50.0" layoutY="143.0" onAction="#registerseller" prefHeight="30.0" prefWidth="250.0" promptText="Email" styleClass="textfield" stylesheets="@../design/loginform.css" />
+                <TextField fx:id="seller_username" layoutX="50.0" layoutY="188.0" onAction="#registerseller" prefHeight="30.0" prefWidth="250.0" promptText="Tài khoản" styleClass="textfield" stylesheets="@../design/loginform.css" />
+                <PasswordField fx:id="seller_password" layoutX="50.0" layoutY="240.0" onAction="#registerseller" prefHeight="30.0" prefWidth="250.0" promptText="Mật khẩu" styleClass="textfield" stylesheets="@../design/loginform.css" />
+                <PasswordField fx:id="seller_cpassword" layoutX="49.0" layoutY="288.0" onAction="#registerseller" prefHeight="30.0" prefWidth="250.0" promptText="Nhập lại mật khẩu" styleClass="textfield" stylesheets="@../design/loginform.css" />
+                <Button fx:id="seller_btnregister" layoutX="50.0" layoutY="338.0" mnemonicParsing="false" onAction="#registerseller" prefHeight="40.0" prefWidth="109.0" styleClass="btn" stylesheets="@../design/loginform.css" text="Đăng ký" />
+                <FontAwesomeIconView fill="#ff3c3c" glyphName="ENVELOPE" layoutX="53.0" layoutY="165.0" size="20" />
+                <FontAwesomeIconView fill="#ff3c3c" glyphName="USER" layoutX="56.0" layoutY="210.0" size="20" />
+                <FontAwesomeIconView fill="#ff3c3c" glyphName="LOCK" layoutX="57.0" layoutY="262.0" size="20.0" />
+                <FontAwesomeIconView fill="#ff3c3c" glyphName="LOCK" layoutX="57.0" layoutY="310.0" size="20.0" />
+                <Label layoutX="81.0" layoutY="466.0" text="Đã có tài khoản?" textFill="WHITE" />
+                <Hyperlink fx:id="seller_dn" layoutX="170.0" layoutY="463.0" onAction="#loginform" text="Đăng nhập" />
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

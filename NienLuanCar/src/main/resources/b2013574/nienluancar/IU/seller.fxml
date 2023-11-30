@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="b2013574.nienluancar.sellercontroller">
+    <children>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <BorderPane layoutX="314.0" layoutY="111.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <left>
+                        <AnchorPane prefHeight="600.0" prefWidth="219.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <AnchorPane layoutX="10.0" layoutY="127.0" prefHeight="600.0" prefWidth="219.0" styleClass="main-bg" stylesheets="@../design/MainForm.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <FontAwesomeIconView fill="WHITE" glyphName="USER" layoutX="86.0" layoutY="65.0" size="5em" />
+                                        <Label fx:id="greet_username" layoutX="51.0" layoutY="78.0" text="Chào Mừng Admin" textFill="WHITE">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font>
+                                        </Label>
+                                        <Line endX="100.0" layoutX="110.0" layoutY="116.0" startX="-100.0" stroke="WHITE" />
+                                        <Button fx:id="addCar_btn" layoutX="11.0" layoutY="140.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="40.0" prefWidth="200.0" styleClass="nav-btn" stylesheets="@../design/MainForm.css" text="Thêm Xe Bán">
+                                            <graphic>
+                                                <FontAwesomeIconView fill="WHITE" glyphName="CAR" size="1.5em" />
+                                            </graphic>
+                                        </Button>
+                                        <Button fx:id="Thanhtoan" layoutX="10.0" layoutY="190.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="40.0" prefWidth="200.0" styleClass="nav-btn" stylesheets="@../design/MainForm.css" text="Thanh toán">
+                                            <graphic>
+                                                <FontAwesomeIconView fill="WHITE" glyphName="MONEY" size="1.5em" />
+                                            </graphic>
+                                        </Button>
+                              <Button fx:id="logout" layoutX="13.0" layoutY="500.0" mnemonicParsing="false" onAction="#logout" prefHeight="44.0" prefWidth="191.0" styleClass="nav-btn" stylesheets="@../design/MainForm.css" text="Đăng Xuất">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="SIGN_OUT" size="3em" wrappingWidth="36.71428680419922" />
+                                 </graphic>
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Button>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </left>
+                    <top>
+                        <AnchorPane prefHeight="37.0" prefWidth="1100.0" stylesheets="@../design/MainForm.css" BorderPane.alignment="CENTER">
+                            <children>
+                                <Label layoutX="14.0" layoutY="8.0" text="Trang Quản Lí" textFill="WHITE">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                            <styleClass>
+                                <String fx:value="shadow" />
+                                <String fx:value="main-bg" />
+                            </styleClass>
+                        </AnchorPane>
+                    </top>
+                    <center>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="563.0" prefWidth="881.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <AnchorPane fx:id="addCar_form" prefHeight="563.0" prefWidth="881.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <children>
+                                                <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="532.0" prefWidth="320.0" stylesheets="@../design/MainForm.css" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
+                                                    <styleClass>
+                                                        <String fx:value="white-bg" />
+                                                        <String fx:value="radius" />
+                                                        <String fx:value="shadow" />
+                                                    </styleClass>
+                                                    <children>
+                                                        <Label layoutX="83.0" layoutY="105.0" text="Tên Xe:" />
+                                                        <TextField fx:id="addCar_car" layoutX="129.0" layoutY="101.0" />
+                                                        <Label layoutX="14.0" layoutY="14.0" text="Thêm Xe">
+                                                            <font>
+                                                                <Font size="20.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label layoutX="82.0" layoutY="151.0" text="Loại Xe:" />
+                                                        <TextField fx:id="addCar_model" layoutX="131.0" layoutY="147.0" />
+                                                        <Label layoutX="63.0" layoutY="222.0" text="Trạng Thái:" />
+                                                        <ComboBox fx:id="addCar_status" layoutX="131.0" layoutY="218.0" prefWidth="150.0" promptText="Choose..." />
+                                                        <Button fx:id="addCar_addBtn" layoutX="38.0" layoutY="330.0" mnemonicParsing="false" onAction="#addCarAddBtn" prefHeight="41.0" prefWidth="96.0" styleClass="btn" stylesheets="@../design/MainForm.css" text="Thêm" />
+                                                        <Button fx:id="addCar_updateBtn" layoutX="186.0" layoutY="330.0" mnemonicParsing="false" onAction="#addCarUpdateBtn" prefHeight="41.0" prefWidth="96.0" styleClass="btn" stylesheets="@../design/MainForm.css" text="Cập Nhật" />
+                                                        <Button fx:id="addCar_clearBtn" layoutX="38.0" layoutY="391.0" mnemonicParsing="false" onAction="#addCarClear" prefHeight="41.0" prefWidth="96.0" styleClass="btn" stylesheets="@../design/MainForm.css" text="Clear" />
+                                                        <Button fx:id="addCar_deleteBtn" layoutX="186.0" layoutY="391.0" mnemonicParsing="false" onAction="#addCarDeleteBtn" prefHeight="41.0" prefWidth="96.0" styleClass="btn" stylesheets="@../design/MainForm.css" text="Xóa" />
+                                                        <Label layoutX="91.0" layoutY="186.0" text="Giá:" />
+                                                        <TextField fx:id="addCar_price" layoutX="131.0" layoutY="182.0" />
+                                                        <Label layoutX="87.0" layoutY="64.0" text="IDCar:" />
+                                                        <TextField fx:id="addCar_carID" layoutX="129.0" layoutY="61.0" />
+                                                    </children>
+                                                </AnchorPane>
+                                                <AnchorPane layoutX="355.0" layoutY="16.0" prefHeight="532.0" prefWidth="512.0" stylesheets="@../design/MainForm.css" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="355.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="16.0">
+                                                    <styleClass>
+                                                        <String fx:value="white-bg" />
+                                                        <String fx:value="radius" />
+                                                        <String fx:value="shadow" />
+                                                    </styleClass>
+                                                    <children>
+                                                        <Label layoutX="14.0" layoutY="14.0" text="Tất Cả Xe Hiện Có">
+                                                            <font>
+                                                                <Font size="20.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <TableView fx:id="addCar_tableView" layoutX="14.0" layoutY="57.0" prefHeight="461.0" prefWidth="484.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="57.0">
+                                                            <columns>
+                                                                <TableColumn fx:id="addCar_col_idCar" prefWidth="75.0" text="IDCar" />
+                                                                <TableColumn fx:id="addCar_col_car" prefWidth="75.0" text="Tên Xe" />
+                                                                <TableColumn fx:id="addCar_col_model" prefWidth="197.0" text="Loại Xe" />
+                                                                <TableColumn fx:id="addCar_col_price" prefWidth="109.0" text="Giá" />
+                                                                <TableColumn fx:id="addCar_col_dateInsert" prefWidth="102.0" text="Ngày Thêm" />
+                                                                <TableColumn fx:id="addCar_col_status" prefWidth="109.0" text="Trạng Thái" />
+                                                            </columns>
+                                                            <columnResizePolicy>
+                                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                            </columnResizePolicy>
+                                                        </TableView>
+                                                    </children>
+                                                </AnchorPane>
+                                            </children>
+                                        </AnchorPane>
+                                        <AnchorPane fx:id="thanhtoan_form" prefHeight="563.0" prefWidth="881.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <children>
+                                                <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="281.0" prefWidth="853.0" stylesheets="@../design/MainForm.css" AnchorPane.bottomAnchor="268.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+                                                    <styleClass>
+                                                        <String fx:value="white-bg" />
+                                                        <String fx:value="shadow" />
+                                                        <String fx:value="radius" />
+                                                    </styleClass>
+                                                    <children>
+                                                        <TableView fx:id="thanhtoan_tableView" layoutX="14.0" layoutY="14.0" prefHeight="253.0" prefWidth="825.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+                                                            <columns>
+                                                                <TableColumn fx:id="thantoan_col_customer_id" prefWidth="75.0" text="IDCus" />
+                                                                <TableColumn fx:id="thanhtoan_col_name" prefWidth="75.0" text="Họ tên" />
+                                                                <TableColumn fx:id="thanhtoan_col_gender" prefWidth="112.0" text="Giới tính" />
+                                                                <TableColumn fx:id="thanhtoan_col_phone" prefWidth="85.0" text="Số điện thoại" />
+                                                                <TableColumn fx:id="thanhtoan_col_carid" prefWidth="82.0" text="IDCar" />
+                                                                <TableColumn fx:id="thanhtoan_col_brand" prefWidth="82.0" text="Tên xe" />
+                                                                <TableColumn fx:id="thanhtoan_col_model" prefWidth="82.0" text="Loại xe" />
+                                                                <TableColumn fx:id="thanhtoan_col_total" prefWidth="82.0" text="Tổng tiền" />
+                                                                <TableColumn fx:id="thanhtoan_col_date" prefWidth="82.0" text="Ngày mua" />
+                                                            </columns>
+                                                            <columnResizePolicy>
+                                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                            </columnResizePolicy>
+                                                        </TableView>
+                                                    </children>
+                                                </AnchorPane>
+                                                <AnchorPane layoutX="14.0" layoutY="318.0" prefHeight="231.0" prefWidth="853.0" stylesheets="@../design/MainForm.css" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+                                                    <styleClass>
+                                                        <String fx:value="white-bg" />
+                                                        <String fx:value="shadow" />
+                                                        <String fx:value="radius" />
+                                                    </styleClass>
+                                                    <children>
+                                                        <Label layoutX="39.0" layoutY="30.0" text="Họ tên:" />
+                                                        <TextField fx:id="thanhtoan_name" layoutX="95.0" layoutY="26.0" prefHeight="25.0" prefWidth="160.0" />
+                                                        <Label layoutX="300.0" layoutY="30.0" text="Tên xe:" />
+                                                        <TextField fx:id="thanhtoan_carname" layoutX="347.0" layoutY="26.0" prefHeight="25.0" prefWidth="160.0" />
+                                                        <Label alignment="CENTER_RIGHT" layoutX="315.0" layoutY="99.0" text="Giá:" />
+                                                        <TextField fx:id="thanhtoan_gia" layoutX="347.0" layoutY="94.0" prefHeight="25.0" prefWidth="160.0" />
+                                                        <Label alignment="CENTER_RIGHT" layoutX="299.0" layoutY="64.0" text="Loại xe:" />
+                                                        <TextField fx:id="thanhtoan_model" layoutX="347.0" layoutY="60.0" prefHeight="25.0" prefWidth="160.0" />
+                                                        <Button fx:id="thanhtoan_addBtn" layoutX="582.0" layoutY="44.0" mnemonicParsing="false" onAction="#thanhtoanAddBtn" prefHeight="50.0" prefWidth="100.0" styleClass="btn" stylesheets="@../design/MainForm.css" text="Add" />
+                                                        <Button fx:id="thanhtoan_updateBtn" layoutX="581.0" layoutY="136.0" mnemonicParsing="false" onAction="#thanhtoanUpdateBtn" prefHeight="50.0" prefWidth="100.0" styleClass="btn" stylesheets="@../design/MainForm.css" text="Delete" />
+                                                        <Button fx:id="thanhtoan_clearBtn" layoutX="711.0" layoutY="137.0" mnemonicParsing="false" onAction="#thanhtoanClearBtn" prefHeight="50.0" prefWidth="100.0" styleClass="btn" stylesheets="@../design/MainForm.css" text="Clear" />
+                                                        <Button fx:id="thanhtoan_list" layoutX="708.0" layoutY="44.0" mnemonicParsing="false" onAction="#ThanhtoanlistBtn" prefHeight="50.0" prefWidth="100.0" styleClass="btn" stylesheets="@../design/MainForm.css" text="List" />
+                                                        <Label layoutX="34.0" layoutY="64.0" text="Giới tính:" />
+                                                        <TextField fx:id="thanhtoan_gender" layoutX="95.0" layoutY="60.0" prefHeight="25.0" prefWidth="160.0" />
+                                                        <Label layoutX="11.0" layoutY="99.0" text="Số điện thoại:" />
+                                                        <TextField fx:id="thanhtoan_phone" layoutX="94.0" layoutY="95.0" prefHeight="25.0" prefWidth="160.0" />
+                                                        <Label layoutX="67.0" layoutY="134.0" text="ID:" />
+                                                        <TextField fx:id="thanhtoan_carid" layoutX="95.0" layoutY="130.0" prefHeight="25.0" prefWidth="160.0" />
+                                                    </children>
+                                                </AnchorPane>
+                                            </children>
+                                        </AnchorPane>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </center>
+                </BorderPane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

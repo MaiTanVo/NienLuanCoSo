@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="b2013574.nienluancar.AddUser">
+    <children>
+        <AnchorPane fx:id="main_form" layoutX="133.0" layoutY="80.0" prefHeight="450.0" prefWidth="650.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <AnchorPane layoutX="14.0" layoutY="17.0" prefHeight="417.0" prefWidth="624.0" stylesheets="@../design/MainForm.css">
+                    <styleClass>
+                        <String fx:value="white-bg" />
+                        <String fx:value="radius" />
+                        <String fx:value="shadow" />
+                    </styleClass>
+                    <children>
+                        <FontAwesomeIconView glyphName="USER" layoutX="28.0" layoutY="295.0" opacity="0.16" size="25em" />
+                        <Label layoutX="14.0" layoutY="14.0" text="Thông tin người dùng">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="70.0" layoutY="67.0" text="*ID:" />
+                        <TextField fx:id="user_number" layoutX="93.0" layoutY="63.0" prefHeight="25.0" prefWidth="149.0" stylesheets="@../design/MainForm.css" />
+                        <Label layoutX="26.0" layoutY="108.0" text="Họ và Tên:" />
+                        <TextField fx:id="user_name" layoutX="93.0" layoutY="104.0" />
+                        <DatePicker fx:id="user_birthDate" layoutX="93.0" layoutY="145.0" prefHeight="25.0" prefWidth="149.0" />
+                        <Label layoutX="30.0" layoutY="192.0" text="Giới tính:" />
+                        <ComboBox fx:id="user_gender" layoutX="93.0" layoutY="188.0" prefWidth="150.0" promptText="Choose..." />
+                        <Label layoutX="27.0" layoutY="232.0" text="Trạng thái:" />
+                        <ComboBox fx:id="user_status" layoutX="93.0" layoutY="228.0" prefWidth="150.0" promptText="Choose..." />
+                        <Button fx:id="user_addBtn" layoutX="281.0" layoutY="253.0" mnemonicParsing="false" onAction="#addBtn" prefHeight="37.0" prefWidth="100.0" styleClass="btn" stylesheets="@../design/MainForm.css" text="Add" />
+                        <Button fx:id="user_updateBtn" layoutX="432.0" layoutY="253.0" mnemonicParsing="false" onAction="#updateBtn" prefHeight="37.0" prefWidth="100.0" styleClass="btn" stylesheets="@../design/MainForm.css" text="Update" />
+                        <Label layoutX="27.0" layoutY="149.0" text="Ngày sinh:" />
+                        <Label layoutX="284.0" layoutY="67.0" text="*Username:" />
+                        <TextField fx:id="user_username" layoutX="348.0" layoutY="63.0" prefHeight="25.0" prefWidth="149.0" stylesheets="@../design/MainForm.css" />
+                        <Label layoutX="286.0" layoutY="110.0" text="*Password:" />
+                        <TextField fx:id="user_password" layoutX="347.0" layoutY="106.0" prefHeight="25.0" prefWidth="149.0" stylesheets="@../design/MainForm.css" />
+                        <Label layoutX="307.0" layoutY="158.0" text="Email:" />
+                        <TextField fx:id="user_email" layoutX="348.0" layoutY="150.0" prefHeight="25.0" prefWidth="149.0" stylesheets="@../design/MainForm.css" />
+                        <Label layoutX="282.0" layoutY="201.0" text="*Chuc nang:" />
+                        <ComboBox fx:id="user_cn" layoutX="348.0" layoutY="197.0" prefWidth="150.0" promptText="Choose..." />
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
